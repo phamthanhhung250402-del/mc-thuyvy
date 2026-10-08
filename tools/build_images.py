@@ -18,7 +18,9 @@ Mỗi ảnh tạo ra: ten.webp (cạnh dài tối đa 1800px) + ten-480.webp, te
 Kích thước được ghi vào data/images.json để website tự điền width/height/srcset.
 """
 import argparse
+import hashlib
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -145,7 +147,22 @@ def main():
         print(f"{key:32s} {info['w']}x{info['h']}  srcset {info['widths']}")
         count += 1
 
+    # Mã phiên bản theo nội dung file -> trình duyệt tải lại ngay khi ảnh đổi (dù trùng tên)
+    for key, info in manifest.items():
+        f = out / (key + ".webp")
+        if f.exists():
+            info["v"] = hashlib.md5(f.read_bytes()).hexdigest()[:8]
     manifest_path.write_text(json.dumps(dict(sorted(manifest.items())), indent=1, ensure_ascii=False) + "\n", "utf-8")
+
+    # Ảnh hero/greeting viết sẵn trong index.html: cập nhật ?v=
+    index = ROOT / "index.html"
+    if index.exists():
+        html = index.read_text("utf-8")
+        for key in ("hero", "greeting"):
+            if key in manifest and "v" in manifest[key]:
+                html = re.sub(r"(assets/img/%s(?:-\d+)?\.webp)(?:\?v=[0-9a-f]+)?" % key,
+                              r"\1?v=" + manifest[key]["v"], html)
+        index.write_text(html, "utf-8")
     print(f"\nĐã xử lý {count} ảnh. Manifest: {manifest_path.relative_to(ROOT)}")
 
 

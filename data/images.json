@@ -5,7 +5,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "0a511208"
  },
  "fields/entertainment": {
   "w": 1440,
@@ -13,7 +14,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "7424e317"
  },
  "fields/esports": {
   "w": 1440,
@@ -21,7 +23,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "a07cfd45"
  },
  "fields/gala": {
   "w": 1440,
@@ -29,7 +32,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "ae252935"
  },
  "fields/launching": {
   "w": 1440,
@@ -37,7 +41,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "d66232ae"
  },
  "fields/tv": {
   "w": 1440,
@@ -45,56 +50,64 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "17751215"
  },
  "gallery/conference-1": {
   "w": 950,
   "h": 935,
   "widths": [
    480
-  ]
+  ],
+  "v": "66b5a5fa"
  },
  "gallery/conference-2": {
   "w": 960,
   "h": 500,
   "widths": [
    480
-  ]
+  ],
+  "v": "fd5d1674"
  },
  "gallery/conference-3": {
   "w": 955,
   "h": 390,
   "widths": [
    480
-  ]
+  ],
+  "v": "21ec5ac4"
  },
  "gallery/conference-4": {
   "w": 955,
   "h": 375,
   "widths": [
    480
-  ]
+  ],
+  "v": "b459c858"
  },
  "gallery/conference-5": {
   "w": 955,
   "h": 352,
   "widths": [
    480
-  ]
+  ],
+  "v": "abd19eed"
  },
  "gallery/entertainment-1": {
   "w": 640,
   "h": 1080,
   "widths": [
    480
-  ]
+  ],
+  "v": "ddf8060a"
  },
  "gallery/entertainment-2": {
   "w": 870,
   "h": 1080,
   "widths": [
    480
-  ]
+  ],
+  "v": "2654a3f0"
  },
  "gallery/entertainment-3": {
   "w": 975,
@@ -102,21 +115,24 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "17fa2f5b"
  },
  "gallery/entertainment-4": {
   "w": 955,
   "h": 912,
   "widths": [
    480
-  ]
+  ],
+  "v": "93067c50"
  },
  "gallery/entertainment-5": {
   "w": 955,
   "h": 935,
   "widths": [
    480
-  ]
+  ],
+  "v": "06af78ad"
  },
  "gallery/esports-1": {
   "w": 1800,
@@ -124,7 +140,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "0a9dde95"
  },
  "gallery/esports-2": {
   "w": 1800,
@@ -132,7 +149,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "93a6adfc"
  },
  "gallery/esports-3": {
   "w": 1000,
@@ -140,112 +158,128 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "06492faf"
  },
  "gallery/esports-4": {
   "w": 955,
   "h": 410,
   "widths": [
    480
-  ]
+  ],
+  "v": "99e4f6b8"
  },
  "gallery/esports-5": {
   "w": 955,
   "h": 420,
   "widths": [
    480
-  ]
+  ],
+  "v": "d2e4531d"
  },
  "gallery/esports-6": {
   "w": 955,
   "h": 365,
   "widths": [
    480
-  ]
+  ],
+  "v": "0ad7996f"
  },
  "gallery/gala-1": {
   "w": 740,
   "h": 1080,
   "widths": [
    480
-  ]
+  ],
+  "v": "da791701"
  },
  "gallery/gala-2": {
   "w": 955,
   "h": 935,
   "widths": [
    480
-  ]
+  ],
+  "v": "bdc65eb1"
  },
  "gallery/gala-3": {
   "w": 955,
   "h": 935,
   "widths": [
    480
-  ]
+  ],
+  "v": "0d0af72a"
  },
  "gallery/gala-4": {
   "w": 955,
   "h": 365,
   "widths": [
    480
-  ]
+  ],
+  "v": "34170aaf"
  },
  "gallery/gala-5": {
   "w": 955,
   "h": 365,
   "widths": [
    480
-  ]
+  ],
+  "v": "c479f769"
  },
  "gallery/gala-6": {
   "w": 955,
   "h": 430,
   "widths": [
    480
-  ]
+  ],
+  "v": "b4e5d732"
  },
  "gallery/launching-1": {
   "w": 920,
   "h": 1080,
   "widths": [
    480
-  ]
+  ],
+  "v": "6710a649"
  },
  "gallery/launching-2": {
   "w": 935,
   "h": 935,
   "widths": [
    480
-  ]
+  ],
+  "v": "20d76f0f"
  },
  "gallery/launching-3": {
   "w": 955,
   "h": 368,
   "widths": [
    480
-  ]
+  ],
+  "v": "1107d351"
  },
  "gallery/launching-4": {
   "w": 955,
   "h": 352,
   "widths": [
    480
-  ]
+  ],
+  "v": "63969d0b"
  },
  "gallery/launching-5": {
   "w": 955,
   "h": 367,
   "widths": [
    480
-  ]
+  ],
+  "v": "8432dcf6"
  },
  "gallery/tv-1": {
   "w": 920,
   "h": 1080,
   "widths": [
    480
-  ]
+  ],
+  "v": "1155a670"
  },
  "gallery/tv-2": {
   "w": 1000,
@@ -253,7 +287,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "206906e3"
  },
  "greeting": {
   "w": 1440,
@@ -261,7 +296,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "94a19698"
  },
  "hero": {
   "w": 1350,
@@ -269,7 +305,8 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "2710973a"
  },
  "showreel-poster": {
   "w": 1800,
@@ -277,6 +314,7 @@
   "widths": [
    480,
    960
-  ]
+  ],
+  "v": "2b65ca93"
  }
 }

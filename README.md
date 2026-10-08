@@ -114,7 +114,7 @@ NODE_PATH=$(npm root -g) node tools/render_brand.cjs
 
 `field` là một trong: `gala`, `conference`, `launching`, `entertainment`, `esports`, `tv` (quyết định bộ lọc và ảnh hiện trong popup lĩnh vực). Xoá ảnh: xoá dòng tương ứng.
 
-> Ảnh thật nên có độ phân giải ≥ 1800px cạnh dài. Ảnh do trình duyệt lưu đệm 1 tuần - sau khi thay ảnh cùng tên, nhấn Ctrl/Cmd+Shift+R để thấy ngay.
+> Ảnh thật nên có độ phân giải ≥ 1800px cạnh dài. Script tự gắn mã phiên bản (`?v=...`) vào đường dẫn ảnh, nên ảnh mới hiện ngay dù trùng tên file. Nếu vẫn thấy bản cũ, nhấn Ctrl/Cmd+Shift+R (máy tính) hoặc đóng hẳn rồi mở lại trình duyệt (điện thoại).
 
 ---
 

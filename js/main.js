@@ -32,7 +32,8 @@
   function icon(id, cls) { return '<svg class="icon' + (cls ? ' ' + cls : '') + '" aria-hidden="true"><use href="#i-' + id + '"/></svg>'; }
   function digits(s) { return String(s).replace(/[^\d+]/g, ''); }
   function loadJSON(url) {
-    return fetch(url, { credentials: 'same-origin' }).then(function (r) {
+    // no-cache: luôn hỏi lại máy chủ (ETag) để thấy ngay nội dung/ảnh vừa cập nhật
+    return fetch(url, { credentials: 'same-origin', cache: 'no-cache' }).then(function (r) {
       if (!r.ok) throw new Error(url + ' ' + r.status);
       return r.json();
     });
@@ -50,13 +51,14 @@
     o = o || {};
     var base = 'assets/img/' + key;
     var m = IMG[key];
+    var q = m && m.v ? '?v=' + m.v : '';
     var w = m ? m.w : 1200, h = m ? m.h : 1500;
     var srcset = '';
     if (m && m.widths && m.widths.length) {
-      srcset = m.widths.map(function (x) { return base + '-' + x + '.webp ' + x + 'w'; })
-        .concat(base + '.webp ' + m.w + 'w').join(', ');
+      srcset = m.widths.map(function (x) { return base + '-' + x + '.webp' + q + ' ' + x + 'w'; })
+        .concat(base + '.webp' + q + ' ' + m.w + 'w').join(', ');
     }
-    return '<img src="' + base + '.webp"' +
+    return '<img src="' + base + '.webp' + q + '"' +
       (srcset ? ' srcset="' + srcset + '" sizes="' + (o.sizes || '100vw') + '"' : '') +
       ' width="' + w + '" height="' + h + '" alt="' + esc(o.alt || '') + '"' +
       (o.eager ? '' : ' loading="lazy"') + ' decoding="async"' + (o.cls ? ' class="' + o.cls + '"' : '') + '>';
@@ -493,16 +495,20 @@
       idx = (i + list.length) % list.length;
       var g = list[idx], m = IMG[g.img];
       var base = 'assets/img/' + g.img;
+      var q = m && m.v ? '?v=' + m.v : '';
       img.removeAttribute('srcset');
-      if (m && m.widths) img.srcset = m.widths.map(function (x) { return base + '-' + x + '.webp ' + x + 'w'; }).concat(base + '.webp ' + m.w + 'w').join(', ');
+      if (m && m.widths) img.srcset = m.widths.map(function (x) { return base + '-' + x + '.webp' + q + ' ' + x + 'w'; }).concat(base + '.webp' + q + ' ' + m.w + 'w').join(', ');
       img.sizes = '100vw';
-      img.src = base + '.webp';
+      img.src = base + '.webp' + q;
       if (m) { img.width = m.w; img.height = m.h; }
       img.alt = g.caption + ' - MC Thúy Vy';
       text.textContent = g.caption;
       count.textContent = fmt(T.gallery.counter, { i: idx + 1, n: list.length });
       if (anim) { img.classList.remove('is-swapping'); void img.offsetWidth; img.classList.add('is-swapping'); }
-      [1, -1].forEach(function (d) { var n = list[(idx + d + list.length) % list.length]; if (n) { var p = new Image(); p.src = 'assets/img/' + n.img + '.webp'; } });
+      [1, -1].forEach(function (d) {
+        var n = list[(idx + d + list.length) % list.length], nm = n && IMG[n.img];
+        if (n) { var p = new Image(); p.src = 'assets/img/' + n.img + '.webp' + (nm && nm.v ? '?v=' + nm.v : ''); }
+      });
       var single = list.length < 2;
       $$('[data-lb]', dlg).forEach(function (b) { b.hidden = single; });
     }
