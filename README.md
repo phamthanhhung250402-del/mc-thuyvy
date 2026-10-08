@@ -17,7 +17,7 @@ mc-thuyvy (repo)
 ├── assets/raw/              ← Ảnh gốc đặt ở đây (KHÔNG đưa lên web)        (mục 3)
 ├── assets/icons/, og-image.jpg, fonts/
 ├── tools/                   Script nén ảnh, tạo og-image (KHÔNG đưa lên web)
-├── CNAME                  (tạo khi gắn tên miền riêng - mục 8)
+├── CNAME                  tên miền riêng mcthuyvy.vn (GitHub tự tạo - đừng xoá)
 ├── vercel.json, .vercelignore   (chỉ dùng nếu chuyển sang Vercel)
 ```
 
@@ -55,9 +55,9 @@ Hỗ trợ: YouTube (cả Shorts), TikTok (link dạng `.../video/<số>`), Face
 
 ### b) `index.html` - địa chỉ website (SITE_URL)
 
-Đang điền sẵn link GitHub Pages: `https://phamthanhhung250402-del.github.io/mc-thuyvy` (6 chỗ trong phần `<head>`, dùng cho ảnh chia sẻ Facebook/Zalo và Google). Khi gắn tên miền riêng (mục 8), mở `index.html`, dùng **Tìm & thay thế tất cả** (Replace All): `https://phamthanhhung250402-del.github.io/mc-thuyvy` → `https://mcthuyvy.vn` (không có dấu `/` ở cuối).
+Đang dùng tên miền riêng **https://mcthuyvy.vn** (6 chỗ trong phần `<head>`, dùng cho ảnh chia sẻ Facebook/Zalo và Google). Tên miền được gắn trong **Settings → Pages → Custom domain** (GitHub lưu vào file `CNAME`). Nếu đổi tên miền, sửa cả hai nơi: Custom domain và Tìm & thay thế tất cả `https://mcthuyvy.vn` trong `index.html`.
 
-**Link hiện tại:** https://phamthanhhung250402-del.github.io/mc-thuyvy/
+**Link website:** https://mcthuyvy.vn
 
 ---
 
@@ -160,7 +160,7 @@ Bật 1 lần duy nhất:
 1. Mở repo https://github.com/phamthanhhung250402-del/mc-thuyvy → **Settings** → mục **Pages** (cột trái).
 2. **Build and deployment → Source**: chọn **Deploy from a branch**.
 3. **Branch**: chọn `main`, thư mục `/ (root)` → **Save**.
-4. Chờ khoảng 1 phút, tải lại trang Settings → Pages sẽ hiện: *Your site is live at* https://phamthanhhung250402-del.github.io/mc-thuyvy/
+4. Chờ khoảng 1 phút, tải lại trang Settings → Pages sẽ hiện: *Your site is live at* https://mcthuyvy.vn/ (đã bật).
 
 Từ đó mỗi lần commit lên `main`, website tự cập nhật sau khoảng 1 phút (xem tiến trình ở tab **Actions**).
 
@@ -186,7 +186,7 @@ Từ đó mỗi lần commit lên `main`, website tự cập nhật sau khoảng
 5. Thay địa chỉ website trong `index.html` (mục 1b) bằng `https://mcthuyvy.vn`, commit.
 6. Kiểm tra ảnh chia sẻ: dán link vào https://developers.facebook.com/tools/debug/ → **Scrape Again**.
 
-Link cũ `https://phamthanhhung250402-del.github.io/mc-thuyvy/` sẽ tự chuyển hướng sang `mcthuyvy.vn`. Portfolio của Hưng (repo `portfolio`) không bị ảnh hưởng.
+✅ **Đã gắn xong `mcthuyvy.vn`.** Link cũ `https://phamthanhhung250402-del.github.io/mc-thuyvy/` tự chuyển hướng sang `mcthuyvy.vn`. Portfolio của Hưng (repo `portfolio`) không bị ảnh hưởng.
 
 (Hướng dẫn chính thức: https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site)
 
