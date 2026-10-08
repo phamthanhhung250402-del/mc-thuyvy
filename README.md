@@ -2,7 +2,7 @@
 
 Website portfolio một trang, song ngữ Việt/English, để nhận booking MC. HTML/CSS/JS thuần, **không framework, không bước build** - sửa file là xong.
 
-> ⚠️ **Ảnh hiện tại là ảnh TẠM (placeholder).** Lúc dựng site, repo chưa có ảnh gốc (`assets/raw/`) lẫn file profile PDF, nên mọi ảnh (chân dung, 6 thẻ lĩnh vực, 18 ảnh thư viện, ảnh bìa showreel, ảnh chia sẻ og-image) đang là khung đỏ - bạc có chữ "Placeholder". **Phải thay bằng ảnh thật trước khi công khai** - xem mục 3.
+> ℹ️ **Ảnh hiện tại được cắt từ file profile PDF (bản "MC THUY VY NEW.pdf", 12/2024)**: chân dung, 6 thẻ lĩnh vực và 29 ảnh thư viện. Ảnh trong PDF chỉ cao 1080px nên hơi kém nét so với ảnh gốc - khi có ảnh gốc, thay theo mục 3. Ảnh bìa showreel vẫn là ảnh thiết kế tạm.
 
 ```
 mc-thuyvy (repo)

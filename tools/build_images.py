@@ -6,7 +6,7 @@ Cách dùng (cần Python 3 + Pillow:  pip install pillow):
     python3 tools/build_images.py --src thu-muc-khac
 
 Đặt tên file trong assets/raw/ theo "vị trí" trên trang (đuôi .jpg/.jpeg/.png/.webp đều được):
-    hero.png                    chân dung tách nền (PNG trong suốt) trong khung vòm ở hero
+    hero.png / hero.jpg         chân dung trong khung vòm ở hero (PNG tách nền hoặc ảnh có nền - tự cắt 3:4)
     greeting.jpg                chân dung cạnh thư "Kính chào quý đối tác"
     showreel-poster.jpg         ảnh bìa khung showreel (ngang 16:9)
     fields/gala.jpg ... fields/tv.jpg   ảnh 6 thẻ lĩnh vực (gala, conference, launching,
@@ -81,6 +81,9 @@ def process(src_file, key, out_dir):
         im = im.convert("RGB")
     slot = slot_for(key)
     if slot:
+        if slot[2] == "contain-bottom" and not alpha:
+            # ảnh hero có nền (không tách nền): cắt đầy khung, ưu tiên phần đầu
+            slot = (slot[0], slot[1], "cover", 0.0)
         im = fit(im, slot)
         alpha = alpha or slot[2] == "contain-bottom"
     else:

@@ -48,56 +48,79 @@
   ]
  },
  "gallery/conference-1": {
-  "w": 1200,
-  "h": 1800,
+  "w": 950,
+  "h": 935,
   "widths": [
-   480,
-   960
+   480
   ]
  },
  "gallery/conference-2": {
-  "w": 1800,
-  "h": 1013,
+  "w": 960,
+  "h": 500,
   "widths": [
-   480,
-   960
+   480
   ]
  },
  "gallery/conference-3": {
-  "w": 1440,
-  "h": 1800,
+  "w": 955,
+  "h": 390,
   "widths": [
-   480,
-   960
+   480
+  ]
+ },
+ "gallery/conference-4": {
+  "w": 955,
+  "h": 375,
+  "widths": [
+   480
+  ]
+ },
+ "gallery/conference-5": {
+  "w": 955,
+  "h": 352,
+  "widths": [
+   480
   ]
  },
  "gallery/entertainment-1": {
-  "w": 1800,
-  "h": 1013,
+  "w": 640,
+  "h": 1080,
   "widths": [
-   480,
-   960
+   480
   ]
  },
  "gallery/entertainment-2": {
-  "w": 1440,
-  "h": 1800,
+  "w": 870,
+  "h": 1080,
+  "widths": [
+   480
+  ]
+ },
+ "gallery/entertainment-3": {
+  "w": 975,
+  "h": 935,
   "widths": [
    480,
    960
   ]
  },
- "gallery/entertainment-3": {
-  "w": 1200,
-  "h": 1800,
+ "gallery/entertainment-4": {
+  "w": 955,
+  "h": 912,
   "widths": [
-   480,
-   960
+   480
+  ]
+ },
+ "gallery/entertainment-5": {
+  "w": 955,
+  "h": 935,
+  "widths": [
+   480
   ]
  },
  "gallery/esports-1": {
   "w": 1800,
-  "h": 1200,
+  "h": 834,
   "widths": [
    480,
    960
@@ -105,87 +128,128 @@
  },
  "gallery/esports-2": {
   "w": 1800,
-  "h": 1350,
+  "h": 769,
   "widths": [
    480,
    960
   ]
  },
  "gallery/esports-3": {
-  "w": 1800,
-  "h": 1800,
+  "w": 1000,
+  "h": 820,
   "widths": [
    480,
    960
+  ]
+ },
+ "gallery/esports-4": {
+  "w": 955,
+  "h": 410,
+  "widths": [
+   480
+  ]
+ },
+ "gallery/esports-5": {
+  "w": 955,
+  "h": 420,
+  "widths": [
+   480
+  ]
+ },
+ "gallery/esports-6": {
+  "w": 955,
+  "h": 365,
+  "widths": [
+   480
   ]
  },
  "gallery/gala-1": {
-  "w": 1800,
-  "h": 1350,
+  "w": 740,
+  "h": 1080,
   "widths": [
-   480,
-   960
+   480
   ]
  },
  "gallery/gala-2": {
-  "w": 1800,
-  "h": 1800,
+  "w": 955,
+  "h": 935,
   "widths": [
-   480,
-   960
+   480
   ]
  },
  "gallery/gala-3": {
-  "w": 1800,
-  "h": 1200,
+  "w": 955,
+  "h": 935,
   "widths": [
-   480,
-   960
+   480
+  ]
+ },
+ "gallery/gala-4": {
+  "w": 955,
+  "h": 365,
+  "widths": [
+   480
+  ]
+ },
+ "gallery/gala-5": {
+  "w": 955,
+  "h": 365,
+  "widths": [
+   480
+  ]
+ },
+ "gallery/gala-6": {
+  "w": 955,
+  "h": 430,
+  "widths": [
+   480
   ]
  },
  "gallery/launching-1": {
-  "w": 1800,
-  "h": 1800,
+  "w": 920,
+  "h": 1080,
   "widths": [
-   480,
-   960
+   480
   ]
  },
  "gallery/launching-2": {
-  "w": 1800,
-  "h": 1200,
+  "w": 935,
+  "h": 935,
   "widths": [
-   480,
-   960
+   480
   ]
  },
  "gallery/launching-3": {
-  "w": 1800,
-  "h": 1350,
+  "w": 955,
+  "h": 368,
   "widths": [
-   480,
-   960
+   480
+  ]
+ },
+ "gallery/launching-4": {
+  "w": 955,
+  "h": 352,
+  "widths": [
+   480
+  ]
+ },
+ "gallery/launching-5": {
+  "w": 955,
+  "h": 367,
+  "widths": [
+   480
   ]
  },
  "gallery/tv-1": {
-  "w": 1440,
-  "h": 1800,
+  "w": 920,
+  "h": 1080,
   "widths": [
-   480,
-   960
+   480
   ]
  },
  "gallery/tv-2": {
-  "w": 1200,
-  "h": 1800,
-  "widths": [
-   480,
-   960
-  ]
- },
- "gallery/tv-3": {
-  "w": 1800,
-  "h": 1013,
+  "w": 1000,
+  "h": 1000,
   "widths": [
    480,
    960

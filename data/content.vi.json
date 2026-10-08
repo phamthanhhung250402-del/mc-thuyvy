@@ -39,14 +39,36 @@
   "stats": {
     "title": "Những con số",
     "items": [
-      { "value": 8, "suffix": "+", "label": "năm kinh nghiệm" },
-      { "value": 1000, "suffix": "+", "label": "sự kiện" },
-      { "value": 50, "suffix": "+", "label": "định dạng chương trình" },
-      { "value": 200, "suffix": "+", "label": "đối tác" }
+      {
+        "value": 8,
+        "suffix": "+",
+        "label": "năm kinh nghiệm"
+      },
+      {
+        "value": 1000,
+        "suffix": "+",
+        "label": "sự kiện"
+      },
+      {
+        "value": 50,
+        "suffix": "+",
+        "label": "định dạng chương trình"
+      },
+      {
+        "value": 200,
+        "suffix": "+",
+        "label": "đối tác"
+      }
     ],
     "specs": [
-      { "label": "Giọng", "value": "miền Nam" },
-      { "label": "Chiều cao", "value": "165cm" }
+      {
+        "label": "Giọng",
+        "value": "miền Nam"
+      },
+      {
+        "label": "Chiều cao",
+        "value": "165cm"
+      }
     ]
   },
   "greeting": {
@@ -181,34 +203,190 @@
     "open": "Phóng to ảnh",
     "counter": "{i} / {n}",
     "items": [
-      { "img": "gallery/gala-1", "field": "gala", "caption": "Shine The Night - YEP Grab 2022" },
-      { "img": "gallery/conference-1", "field": "conference", "caption": "Hội nghị Đại lý Chiến lược Sony 2025" },
-      { "img": "gallery/launching-1", "field": "launching", "caption": "Ra mắt Tecno Spark 20 Pro+" },
-      { "img": "gallery/entertainment-1", "field": "entertainment", "caption": "The Face Trí Đức 2024" },
-      { "img": "gallery/esports-1", "field": "esports", "caption": "Vietnam GameVerse 2025" },
-      { "img": "gallery/tv-1", "field": "tv", "caption": "HTV7" },
-      { "img": "gallery/gala-2", "field": "gala", "caption": "Audi New Year Eve Party" },
-      { "img": "gallery/conference-2", "field": "conference", "caption": "Cisco Engage 2022" },
-      { "img": "gallery/launching-2", "field": "launching", "caption": "Ra mắt Dyson Airwrap Co-anda 2X" },
-      { "img": "gallery/entertainment-2", "field": "entertainment", "caption": "Miss & Mister UFM 2023" },
-      { "img": "gallery/esports-2", "field": "esports", "caption": "Valorant Champions Paris 2025 Viewing Party" },
-      { "img": "gallery/tv-2", "field": "tv", "caption": "VOH FM 95.6MHz" },
-      { "img": "gallery/gala-3", "field": "gala", "caption": "MICO Gala 2024" },
-      { "img": "gallery/conference-3", "field": "conference", "caption": "Samsung Innovation Campus Tech Day 2025" },
-      { "img": "gallery/launching-3", "field": "launching", "caption": "BYD Seal 05 DM-i Super Hybrid" },
-      { "img": "gallery/entertainment-3", "field": "entertainment", "caption": "Anessa Sunshine Project" },
-      { "img": "gallery/esports-3", "field": "esports", "caption": "Đấu trường Danh vọng Liên Quân Mobile" },
-      { "img": "gallery/tv-3", "field": "tv", "caption": "Kênh 14" }
+      {
+        "img": "gallery/gala-1",
+        "field": "gala",
+        "caption": "Shine The Night - YEP Grab 2022"
+      },
+      {
+        "img": "gallery/conference-1",
+        "field": "conference",
+        "caption": "Festival 2025 - Ride To Win"
+      },
+      {
+        "img": "gallery/launching-1",
+        "field": "launching",
+        "caption": "Ra mắt Tecno Spark 20 Pro+"
+      },
+      {
+        "img": "gallery/entertainment-1",
+        "field": "entertainment",
+        "caption": "Miss & Mister UFM 2023"
+      },
+      {
+        "img": "gallery/esports-1",
+        "field": "esports",
+        "caption": "Vietnam GameVerse 2024"
+      },
+      {
+        "img": "gallery/tv-1",
+        "field": "tv",
+        "caption": "VOH FM 95.6MHz"
+      },
+      {
+        "img": "gallery/gala-2",
+        "field": "gala",
+        "caption": "The Precious Lasting - MC không kịch bản"
+      },
+      {
+        "img": "gallery/conference-2",
+        "field": "conference",
+        "caption": "LG Life Revolution - Hội nghị đại lý chiến lược 2024"
+      },
+      {
+        "img": "gallery/launching-2",
+        "field": "launching",
+        "caption": "Pond's - Hành trình mở khóa phép màu từ khoa học"
+      },
+      {
+        "img": "gallery/entertainment-2",
+        "field": "entertainment",
+        "caption": "Intel Tech Camp 2023"
+      },
+      {
+        "img": "gallery/esports-2",
+        "field": "esports",
+        "caption": "MC không kịch bản cùng Độ Mixi"
+      },
+      {
+        "img": "gallery/tv-2",
+        "field": "tv",
+        "caption": "Livestream Shell & Lifebuoy"
+      },
+      {
+        "img": "gallery/gala-3",
+        "field": "gala",
+        "caption": "Audi New Year Eve Party 2024"
+      },
+      {
+        "img": "gallery/conference-3",
+        "field": "conference",
+        "caption": "Cisco Engage 2022"
+      },
+      {
+        "img": "gallery/launching-3",
+        "field": "launching",
+        "caption": "Lễ khánh thành nhà máy AICA Laminates"
+      },
+      {
+        "img": "gallery/entertainment-3",
+        "field": "entertainment",
+        "caption": "Anessa Sunshine Project"
+      },
+      {
+        "img": "gallery/esports-3",
+        "field": "esports",
+        "caption": "Đấu trường Danh vọng Liên Quân Mobile"
+      },
+      {
+        "img": "gallery/gala-4",
+        "field": "gala",
+        "caption": "The Glory of Empowerpreneur"
+      },
+      {
+        "img": "gallery/conference-4",
+        "field": "conference",
+        "caption": "Lễ ký kết hợp tác FPT Telecom International - Awing - Aruba"
+      },
+      {
+        "img": "gallery/launching-4",
+        "field": "launching",
+        "caption": "Ra mắt dầu tẩy trang Shu Uemura Ultime8"
+      },
+      {
+        "img": "gallery/entertainment-4",
+        "field": "entertainment",
+        "caption": "Grand Opus International Piano Competition 2023"
+      },
+      {
+        "img": "gallery/esports-4",
+        "field": "esports",
+        "caption": "Audition's 17th Birthday"
+      },
+      {
+        "img": "gallery/gala-5",
+        "field": "gala",
+        "caption": "Lotteria 25th Anniversary"
+      },
+      {
+        "img": "gallery/conference-5",
+        "field": "conference",
+        "caption": "Workshop Garmin \"Why Do We Run\""
+      },
+      {
+        "img": "gallery/launching-5",
+        "field": "launching",
+        "caption": "Ra mắt sản phẩm Colossus"
+      },
+      {
+        "img": "gallery/entertainment-5",
+        "field": "entertainment",
+        "caption": "Full Moon Festival"
+      },
+      {
+        "img": "gallery/esports-5",
+        "field": "esports",
+        "caption": "League of Legends"
+      },
+      {
+        "img": "gallery/gala-6",
+        "field": "gala",
+        "caption": "YEP Wowbuy Việt Nam 2023"
+      },
+      {
+        "img": "gallery/esports-6",
+        "field": "esports",
+        "caption": "PUBG Mobile"
+      }
     ]
   },
   "clients": {
     "eyebrow": "Đối tác",
     "title": "Khách hàng đã đồng hành",
     "list": [
-      "HTV7", "HTV9", "HGV", "VOH", "Kênh 14", "Shell", "Grab", "Unilever", "Vingroup", "VFF", "PNJ",
-      "ASUS", "LG", "Intel", "VNG Games", "VTC Game", "MSI", "La Roche-Posay", "Shiseido", "Generali",
-      "Audi", "Ford", "AIESEC", "Nguyễn Kim", "Đất Xanh Group", "Heineken Vietnam", "Tiger", "VIB",
-      "ACB", "Sony", "MobiFone", "Samsung", "Cisco"
+      "HTV7",
+      "HTV9",
+      "HGV",
+      "VOH",
+      "Kênh 14",
+      "Shell",
+      "Grab",
+      "Unilever",
+      "Vingroup",
+      "VFF",
+      "PNJ",
+      "ASUS",
+      "LG",
+      "Intel",
+      "VNG Games",
+      "VTC Game",
+      "MSI",
+      "La Roche-Posay",
+      "Shiseido",
+      "Generali",
+      "Audi",
+      "Ford",
+      "AIESEC",
+      "Nguyễn Kim",
+      "Đất Xanh Group",
+      "Heineken Vietnam",
+      "Tiger",
+      "VIB",
+      "ACB",
+      "Sony",
+      "MobiFone",
+      "Samsung",
+      "Cisco"
     ],
     "more": "và hơn 200 đối tác khác"
   },
@@ -221,14 +399,46 @@
     "next": "Phản hồi tiếp theo",
     "goTo": "Tới phản hồi {i}",
     "items": [
-      { "quote": "You did a good job! You have a good voice.", "name": "Professor Kwon Han Jin", "role": "CEO Ultra V Korea" },
-      { "quote": "Chị rất vui vì được làm việc cùng Thúy Vy! Nhanh nhẹn ứng biến mọi thứ quá ok. Có rất nhiều phần phát sinh không trong MC script mà em dẫn vẫn mượt mà, xử lí tình huống quá tốt. Hy vọng sớm gặp lại Vy.", "name": "Ms. Nguyen Thuy Anh Thu", "role": "Head of TV Department, Sony Vietnam" },
-      { "quote": "Vy dẫn xuất sắc lắm. Chương trình có nhiều thay đổi, trục trặc lớn mà em vẫn làm tốt. Ứng biến nhanh nhẹn. Quá tuyệt vời!", "name": "Mr. Truong Lap Hong", "role": "CEO Gia Thanh Co., Ltd." },
-      { "quote": "Hôm nay chương trình thành công. Mọi thứ tuyệt vời, nhất là MC Thúy Vy", "name": "Mr. Hồ Trung Hiếu", "role": "Giám đốc Kinh doanh Toàn quốc LG Electronics" },
-      { "quote": "Chương trình hôm nay quá thành công. Thúy Vy dẫn ok nhờ? Rất linh hoạt, quá mượt mà. Không có gì để chê cả. Book bạn Vy ra Hà Nội làm MC đi.", "name": "Ban lãnh đạo Tổng công ty Viễn thông MobiFone", "role": "" },
-      { "quote": "Anh cảm ơn Thúy Vy rất là nhiều, vì nhờ Vy mọi thứ được suôn sẻ hôm nay.", "name": "Mr. Thân Trung Nghĩa", "role": "Giám đốc vHost" },
-      { "quote": "Thúy Vy rất chuyên nghiệp. Hôm nay Vy bước lên quá sáng sân khấu, tất cả mọi thứ đều tuyệt vời. Các chương trình tiếp theo bên chị lại mời Vy nhé!", "name": "Ms. Nguyễn Cẩm Chi", "role": "Phó Tổng Giám đốc điều hành, Viện Thành viên Hội đồng Quản trị Việt Nam (VIOD)" },
-      { "quote": "Kỹ thuật có vấn đề, may mà lúc đó Thúy Vy ứng phó kịp. Sếp chị khen Vy tấm tắc. MC ok quá, lần sau bên chị liên hệ em tiếp, nhớ ưu tiên lịch cho bên chị nhé!", "name": "Ms. Huỳnh Ngọc Mỹ Hiền", "role": "Trợ lí Giám đốc, vHost" }
+      {
+        "quote": "You did a good job! You have a good voice.",
+        "name": "Professor Kwon Han Jin",
+        "role": "CEO Ultra V Korea"
+      },
+      {
+        "quote": "Chị rất vui vì được làm việc cùng Thúy Vy! Nhanh nhẹn ứng biến mọi thứ quá ok. Có rất nhiều phần phát sinh không trong MC script mà em dẫn vẫn mượt mà, xử lí tình huống quá tốt. Hy vọng sớm gặp lại Vy.",
+        "name": "Ms. Nguyen Thuy Anh Thu",
+        "role": "Head of TV Department, Sony Vietnam"
+      },
+      {
+        "quote": "Vy dẫn xuất sắc lắm. Chương trình có nhiều thay đổi, trục trặc lớn mà em vẫn làm tốt. Ứng biến nhanh nhẹn. Quá tuyệt vời!",
+        "name": "Mr. Truong Lap Hong",
+        "role": "CEO Gia Thanh Co., Ltd."
+      },
+      {
+        "quote": "Hôm nay chương trình thành công. Mọi thứ tuyệt vời, nhất là MC Thúy Vy",
+        "name": "Mr. Hồ Trung Hiếu",
+        "role": "Giám đốc Kinh doanh Toàn quốc LG Electronics"
+      },
+      {
+        "quote": "Chương trình hôm nay quá thành công. Thúy Vy dẫn ok nhờ? Rất linh hoạt, quá mượt mà. Không có gì để chê cả. Book bạn Vy ra Hà Nội làm MC đi.",
+        "name": "Ban lãnh đạo Tổng công ty Viễn thông MobiFone",
+        "role": ""
+      },
+      {
+        "quote": "Anh cảm ơn Thúy Vy rất là nhiều, vì nhờ Vy mọi thứ được suôn sẻ hôm nay.",
+        "name": "Mr. Thân Trung Nghĩa",
+        "role": "Giám đốc vHost"
+      },
+      {
+        "quote": "Thúy Vy rất chuyên nghiệp. Hôm nay Vy bước lên quá sáng sân khấu, tất cả mọi thứ đều tuyệt vời. Các chương trình tiếp theo bên chị lại mời Vy nhé!",
+        "name": "Ms. Nguyễn Cẩm Chi",
+        "role": "Phó Tổng Giám đốc điều hành, Viện Thành viên Hội đồng Quản trị Việt Nam (VIOD)"
+      },
+      {
+        "quote": "Kỹ thuật có vấn đề, may mà lúc đó Thúy Vy ứng phó kịp. Sếp chị khen Vy tấm tắc. MC ok quá, lần sau bên chị liên hệ em tiếp, nhớ ưu tiên lịch cho bên chị nhé!",
+        "name": "Ms. Huỳnh Ngọc Mỹ Hiền",
+        "role": "Trợ lí Giám đốc, vHost"
+      }
     ]
   },
   "contact": {
