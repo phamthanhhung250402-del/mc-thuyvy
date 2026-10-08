@@ -51,7 +51,18 @@ def slot_for(key):
 def fit(im, slot):
     w, h, mode, focus = slot
     if mode == "cover":
-        return ImageOps.fit(im, (w, h), Image.LANCZOS, centering=(0.5, focus))
+        # Cắt đúng tỉ lệ khung; chỉ thu nhỏ, KHÔNG phóng to ảnh nhỏ (phóng to làm ảnh mờ)
+        ratio = w / h
+        if im.width / im.height > ratio:
+            cw, ch = round(im.height * ratio), im.height
+        else:
+            cw, ch = im.width, round(im.width / ratio)
+        left = round((im.width - cw) * 0.5)
+        top = round((im.height - ch) * focus)
+        im = im.crop((left, top, left + cw, top + ch))
+        if cw > w:
+            im = im.resize((w, h), Image.LANCZOS)
+        return im
     # contain-bottom: giữ nguyên toàn bộ ảnh tách nền, canh giữa - sát đáy, nền trong suốt
     im = im.convert("RGBA")
     im.thumbnail((w, h), Image.LANCZOS)
@@ -72,7 +83,7 @@ def save(im, path, alpha):
     if alpha:
         im.convert("RGBA").save(path, "WEBP", quality=86, alpha_quality=90, method=6)
     else:
-        im.convert("RGB").save(path, "WEBP", quality=80, method=6)
+        im.convert("RGB").save(path, "WEBP", quality=88, method=6)
 
 
 def process(src_file, key, out_dir):
@@ -159,9 +170,15 @@ def main():
     if index.exists():
         html = index.read_text("utf-8")
         for key in ("hero", "greeting"):
-            if key in manifest and "v" in manifest[key]:
-                html = re.sub(r"(assets/img/%s(?:-\d+)?\.webp)(?:\?v=[0-9a-f]+)?" % key,
-                              r"\1?v=" + manifest[key]["v"], html)
+            info = manifest.get(key)
+            if not info or "v" not in info:
+                continue
+            q = "?v=" + info["v"]
+            srcset = ", ".join([f"assets/img/{key}-{w}.webp{q} {w}w" for w in info["widths"]]
+                               + [f"assets/img/{key}.webp{q} {info['w']}w"])
+            html = re.sub(r'((?:image)?srcset=")assets/img/%s[-.][^"]*"' % key, lambda m: m.group(1) + srcset + '"', html)
+            html = re.sub(r'(src=")assets/img/%s\.webp[^"]*"' % key, lambda m: m.group(1) + f"assets/img/{key}.webp{q}" + '"', html)
+            html = re.sub(r'(href=")assets/img/%s\.webp[^"]*"' % key, lambda m: m.group(1) + f"assets/img/{key}.webp{q}" + '"', html)
         index.write_text(html, "utf-8")
     print(f"\nĐã xử lý {count} ảnh. Manifest: {manifest_path.relative_to(ROOT)}")
 
