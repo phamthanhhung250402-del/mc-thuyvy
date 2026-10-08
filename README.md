@@ -5,7 +5,7 @@ Website portfolio một trang, song ngữ Việt/English, để nhận booking M
 > ⚠️ **Ảnh hiện tại là ảnh TẠM (placeholder).** Lúc dựng site, repo chưa có ảnh gốc (`assets/raw/`) lẫn file profile PDF, nên mọi ảnh (chân dung, 6 thẻ lĩnh vực, 18 ảnh thư viện, ảnh bìa showreel, ảnh chia sẻ og-image) đang là khung đỏ - bạc có chữ "Placeholder". **Phải thay bằng ảnh thật trước khi công khai** - xem mục 3.
 
 ```
-mc-thuyvy/
+mc-thuyvy (repo)
 ├── index.html               Khung trang (không chứa chữ - chữ nằm trong data/)
 ├── css/style.css            Giao diện   ·  css/fonts.css  font tự host (có tiếng Việt)
 ├── js/config.js             ← SĐT, Zalo, email, mạng xã hội, video, form   (mục 1)
@@ -17,7 +17,8 @@ mc-thuyvy/
 ├── assets/raw/              ← Ảnh gốc đặt ở đây (KHÔNG đưa lên web)        (mục 3)
 ├── assets/icons/, og-image.jpg, fonts/
 ├── tools/                   Script nén ảnh, tạo og-image (KHÔNG đưa lên web)
-├── vercel.json, .vercelignore
+├── CNAME                  (tạo khi gắn tên miền riêng - mục 8)
+├── vercel.json, .vercelignore   (chỉ dùng nếu chuyển sang Vercel)
 ```
 
 ---
@@ -54,16 +55,16 @@ Hỗ trợ: YouTube (cả Shorts), TikTok (link dạng `.../video/<số>`), Face
 
 ### b) `index.html` - địa chỉ website (SITE_URL)
 
-Đang điền sẵn link GitHub Pages: `https://phamthanhhung250402-del.github.io/portfolio/mc-thuyvy` (6 chỗ trong phần `<head>`, dùng cho ảnh chia sẻ Facebook/Zalo và Google). Khi chuyển sang Vercel hoặc có tên miền riêng (mục 7, 8), mở `index.html`, dùng **Tìm & thay thế tất cả** (Replace All): `https://phamthanhhung250402-del.github.io/portfolio/mc-thuyvy` → `https://mcthuyvy.vn` (không có dấu `/` ở cuối).
+Đang điền sẵn link GitHub Pages: `https://phamthanhhung250402-del.github.io/mc-thuyvy` (6 chỗ trong phần `<head>`, dùng cho ảnh chia sẻ Facebook/Zalo và Google). Khi gắn tên miền riêng (mục 8), mở `index.html`, dùng **Tìm & thay thế tất cả** (Replace All): `https://phamthanhhung250402-del.github.io/mc-thuyvy` → `https://mcthuyvy.vn` (không có dấu `/` ở cuối).
 
-**Link hiện tại:** https://phamthanhhung250402-del.github.io/portfolio/mc-thuyvy/
+**Link hiện tại:** https://phamthanhhung250402-del.github.io/mc-thuyvy/
 
 ---
 
 ## 2. Chạy thử trên máy
 
 ```bash
-cd mc-thuyvy
+cd mc-thuyvy        # thư mục repo sau khi clone
 npx serve .          # hoặc: python3 -m http.server 8080
 ```
 
@@ -74,7 +75,9 @@ Mở `http://localhost:3000` (hoặc `:8080`). **Không mở trực tiếp file 
 ## 3. Thay ảnh (quan trọng)
 
 ### Cách nhanh nhất
-Bỏ ảnh gốc vào `mc-thuyvy/assets/raw/` (đặt tên như bảng dưới), push lên GitHub và nhắn Claude: *"Tôi đã upload ảnh vào assets/raw, hãy xử lý và cập nhật website"*.
+Gửi ảnh gốc (đặt tên như bảng dưới hoặc ghi chú ảnh nào dùng ở đâu) cho Claude, Claude sẽ nén và cập nhật website.
+
+> ⚠️ Repo này **công khai** (GitHub Pages miễn phí yêu cầu vậy). `.gitignore` đã chặn mọi file trong `assets/raw/` để ảnh gốc độ phân giải cao **không bị đẩy lên GitHub**. Chỉ ảnh đã nén trong `assets/img/` được đưa lên web.
 
 ### Tự làm
 1. Đặt ảnh gốc vào `assets/raw/` theo đúng tên (đuôi `.jpg`, `.png`, `.webp` đều được):
@@ -91,7 +94,7 @@ Bỏ ảnh gốc vào `mc-thuyvy/assets/raw/` (đặt tên như bảng dưới),
 2. Nén ảnh (cần Python 3 và Pillow - cài 1 lần: `pip install pillow`):
 
 ```bash
-cd mc-thuyvy
+cd mc-thuyvy        # thư mục repo sau khi clone
 python3 tools/build_images.py
 ```
 
@@ -125,7 +128,7 @@ NODE_PATH=$(npm root -g) node tools/render_brand.cjs
 ## 5. Sửa nội dung & bản dịch
 
 - Tất cả chữ trên trang nằm trong `data/content.vi.json` (tiếng Việt, mặc định) và `data/content.en.json` (tiếng Anh). Hai file có **cùng cấu trúc** - sửa chỗ nào ở file này thì sửa chỗ tương ứng ở file kia.
-- Sửa trên GitHub: mở file → biểu tượng bút chì ✏️ → sửa → **Commit changes**. Vercel tự cập nhật sau khoảng 30 giây.
+- Sửa trên GitHub: mở file → biểu tượng bút chì ✏️ → sửa → **Commit changes**. Website tự cập nhật sau khoảng 1 phút.
 - Lưu ý cú pháp JSON: chữ nằm trong `"..."`; muốn có dấu ngoặc kép bên trong thì viết `\"`; các mục cách nhau bằng dấu phẩy, mục cuối không có dấu phẩy. Kiểm tra nhanh tại https://jsonlint.com nếu trang bị trống chữ.
 - Một số vị trí tiêu biểu:
   - `hero` - tên, phụ đề, tagline, chữ trên nút
@@ -150,39 +153,42 @@ Chưa có endpoint thì nút "Gửi yêu cầu" sẽ mở ứng dụng email c�
 
 ---
 
-## 7. Deploy lên Vercel (repo private vẫn dùng được, gói Hobby miễn phí)
+## 7. Đưa lên mạng bằng GitHub Pages (miễn phí)
 
-1. Vào https://vercel.com → **Sign Up** → **Continue with GitHub** (dùng tài khoản GitHub sở hữu repo `portfolio`).
-2. Ở Dashboard bấm **Add New… → Project**.
-3. Mục **Import Git Repository**: nếu không thấy repo `portfolio`, bấm **Adjust GitHub App Permissions** → chọn repo `portfolio` → **Save**. Quay lại và bấm **Import** cạnh repo.
-4. Màn hình **Configure Project**:
-   - **Project Name**: `mc-thuyvy` (tên này thành địa chỉ `mc-thuyvy.vercel.app` nếu còn trống)
-   - **Framework Preset**: `Other`
-   - **Root Directory**: bấm **Edit** → chọn thư mục **`mc-thuyvy`** → **Continue** ← *quan trọng*
-   - **Build and Output Settings**: để trống hết (không có build command)
-5. Bấm **Deploy**. Khoảng 30 giây sau có link dạng `https://mc-thuyvy.vercel.app`.
-6. Vào **Settings → Git → Production Branch**: đặt nhánh chứa website (thường là `main` sau khi merge). Từ đó mỗi lần push/commit, Vercel tự cập nhật; các nhánh khác có link xem trước riêng.
-7. Thay địa chỉ website trong `index.html` bằng link vừa có (mục 1b), commit.
+Bật 1 lần duy nhất:
 
-`vercel.json` đã cấu hình sẵn cache cho font/ảnh và header bảo mật; `.vercelignore` loại `assets/raw/`, `tools/`, PDF và README khỏi website.
+1. Mở repo https://github.com/phamthanhhung250402-del/mc-thuyvy → **Settings** → mục **Pages** (cột trái).
+2. **Build and deployment → Source**: chọn **Deploy from a branch**.
+3. **Branch**: chọn `main`, thư mục `/ (root)` → **Save**.
+4. Chờ khoảng 1 phút, tải lại trang Settings → Pages sẽ hiện: *Your site is live at* https://phamthanhhung250402-del.github.io/mc-thuyvy/
+
+Từ đó mỗi lần commit lên `main`, website tự cập nhật sau khoảng 1 phút (xem tiến trình ở tab **Actions**).
+
+> Muốn dùng Vercel thay vì GitHub Pages: vercel.com → Add New → Project → import repo `mc-thuyvy` → Framework Preset **Other** → Deploy (không cần chỉnh Root Directory). `vercel.json` và `.vercelignore` đã cấu hình sẵn.
 
 ---
 
 ## 8. Gắn tên miền riêng (ví dụ `mcthuyvy.vn`)
 
-1. Mua tên miền (Mắt Bão, PA Vietnam, Tenten, Namecheap…).
-2. Vercel → Project `mc-thuyvy` → **Settings → Domains** → nhập `mcthuyvy.vn` → **Add**. Chọn phương án Vercel đề xuất (thường thêm cả `www.mcthuyvy.vn` và chuyển hướng về một bản).
-3. Vào trang quản lý DNS của nơi mua tên miền, thêm đúng các bản ghi Vercel hiển thị, thường là:
+1. Mua tên miền (Mắt Bão, PA Vietnam, Tenten, iNET…). Tên miền `.vn` cần khai báo thông tin chủ sở hữu (thường kèm CCCD) - nên đứng tên Thúy Vy.
+2. Vào trang quản lý DNS của nơi mua tên miền, thêm các bản ghi sau (xoá bản ghi `A`/`CNAME` cũ trùng tên nếu có):
 
 | Loại | Tên (Host) | Giá trị |
 |---|---|---|
-| `A` | `@` | `76.76.21.21` |
-| `CNAME` | `www` | `cname.vercel-dns.com` |
+| `A` | `@` | `185.199.108.153` |
+| `A` | `@` | `185.199.109.153` |
+| `A` | `@` | `185.199.110.153` |
+| `A` | `@` | `185.199.111.153` |
+| `CNAME` | `www` | `phamthanhhung250402-del.github.io` |
 
-   (Luôn lấy giá trị **chính xác đang hiển thị** trong Vercel - có thể khác bảng trên.) Xoá bản ghi `A`/`CNAME` cũ trùng tên nếu có.
-4. Chờ 5 phút - vài giờ. Vercel tự cấp HTTPS khi dấu ✓ chuyển xanh.
-5. Thay địa chỉ website (mục 1b) trong `index.html` bằng `https://mcthuyvy.vn`, commit.
+3. GitHub → repo `mc-thuyvy` → **Settings → Pages → Custom domain**: nhập `mcthuyvy.vn` → **Save** (GitHub tự tạo file `CNAME` trong repo).
+4. Chờ DNS kiểm tra xong (5 phút - vài giờ), tick **Enforce HTTPS**.
+5. Thay địa chỉ website trong `index.html` (mục 1b) bằng `https://mcthuyvy.vn`, commit.
 6. Kiểm tra ảnh chia sẻ: dán link vào https://developers.facebook.com/tools/debug/ → **Scrape Again**.
+
+Link cũ `https://phamthanhhung250402-del.github.io/mc-thuyvy/` sẽ tự chuyển hướng sang `mcthuyvy.vn`. Portfolio của Hưng (repo `portfolio`) không bị ảnh hưởng.
+
+(Hướng dẫn chính thức: https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site)
 
 ---
 
@@ -190,7 +196,7 @@ Chưa có endpoint thì nút "Gửi yêu cầu" sẽ mở ứng dụng email c�
 
 - [ ] Đã thay toàn bộ ảnh placeholder (mục 3) và tạo lại og-image
 - [ ] Đã điền liên hệ, showreel, Formspree trong `js/config.js`
-- [ ] Đã cập nhật địa chỉ website trong `index.html` nếu đổi sang Vercel/tên miền riêng
+- [ ] Đã cập nhật địa chỉ website trong `index.html` nếu gắn tên miền riêng
 - [ ] Gửi thử form, bấm thử nút Gọi/Zalo trên điện thoại
 - [ ] Xem lại bản tiếng Anh (nút EN) - bản dịch do Claude soạn, nên nhờ người đọc lại các trích dẫn khách hàng
 - [ ] Hỏi ý kiến các khách hàng có tên trong mục "Khách hàng nói gì" nếu cần
@@ -200,5 +206,5 @@ Chưa có endpoint thì nút "Gửi yêu cầu" sẽ mở ứng dụng email c�
 - Font Cormorant SC, Cormorant Garamond, Be Vietnam Pro, Great Vibes được **tự host** (subset latin + vietnamese) - không phụ thuộc Google Fonts, hiển thị dấu tiếng Việt đầy đủ.
 - Đổi ngôn ngữ lưu vào trình duyệt; có thể gửi thẳng link tiếng Anh: `https://mcthuyvy.vn/?lang=en`.
 - Tôn trọng chế độ giảm chuyển động (prefers-reduced-motion): tắt rèm, đếm số, lấp lánh.
-- Lighthouse (mô phỏng mobile, có nén như Vercel): Performance 94 · Accessibility 100 · Best Practices 100 · SEO 100 khi đã điền địa chỉ website. Desktop: 100 · 100 · 100.
+- Lighthouse (mô phỏng mobile, có nén gzip như GitHub Pages/Vercel): Performance 94 · Accessibility 100 · Best Practices 100 · SEO 100 khi đã điền địa chỉ website. Desktop: 100 · 100 · 100.
 - `tools/make_placeholders.cjs` chỉ dùng để tạo lại ảnh tạm - không cần khi đã có ảnh thật.

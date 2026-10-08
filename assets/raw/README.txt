@@ -1,4 +1,4 @@
-Đặt ảnh gốc của Thúy Vy vào thư mục này (không được đưa lên website - xem .vercelignore).
+Đặt ảnh gốc của Thúy Vy vào thư mục này. File ở đây KHÔNG được commit lên GitHub (xem .gitignore) vì repo công khai.
 Tên file theo vị trí trên trang - xem hướng dẫn chi tiết trong ../../README.md, mục "Thay ảnh".
 
   hero.png                 chân dung tách nền (PNG trong suốt)

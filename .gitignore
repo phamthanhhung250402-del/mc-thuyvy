@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+__pycache__/
+# Ảnh gốc không đưa lên GitHub (repo công khai) - chỉ ảnh đã nén trong assets/img/
+assets/raw/*
+!assets/raw/README.txt
+*.pdf
+reference/
